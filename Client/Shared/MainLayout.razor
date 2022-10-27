@@ -1,17 +1,59 @@
 ﻿@inherits LayoutComponentBase
+<MudThemeProvider  Theme="@averyBusiness"/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudImage Src="/images/logo.png" Height="50" Width="50"></MudImage>
+        <MudText Typo="Typo.h5" Style="color:black">Avery Business Solutions</MudText>
+        <MudSpacer> </MudSpacer>
+        <MudButton Href="/contact">Contact</MudButton>
+    </MudAppBar>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+@code{
+    MudTheme averyBusiness = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Blue.Default,
+            PrimaryDarken = Colors.Blue.Darken4,
+            PrimaryLighten = Colors.LightBlue.Default,
+            AppbarBackground = Colors.Grey.Lighten3,
+            Secondary = Colors.DeepOrange.Accent3,
+            SecondaryDarken = Colors.DeepOrange.Darken4,
+            SecondaryLighten = Colors.DeepOrange.Lighten1
+        },
+        Typography = new Typography()
+        {
+            H1 = new H1()
+            {
+                FontFamily = new[] { "Archive", "Monument", "JetBrains Mono" }
+            },
+                H2 = new H2()
+                {
+                    FontFamily = new[] { "Archive", "Monument", "JetBrains Mono" }
+                },
+                H3 = new H3()
+                {
+                    FontFamily = new[] { "Archive", "Monument", "JetBrains Mono" }
+                },
+                H4 = new H4()
+                {
+                    FontFamily = new[] { "Archive", "Monument", "JetBrains Mono" }
+                },
+                H5 = new H5()
+                {
+                    FontFamily = new[] { "Archive", "Monument", "JetBrains Mono" }
+                },
+                H6 = new H6()
+                {
+                    FontFamily = new[] { "Archive", "Monument", "JetBrains Mono" }
+                }
+        }
+    };
+}

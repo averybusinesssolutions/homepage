@@ -1,9 +1,89 @@
 ﻿@page "/"
-
+    
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+<MudContainer Class="mt-16">
+    <MudGrid>
+        <MudItem xs="12" sm="6">
+            <MudCard>
+                <MudCardHeader>
+                    <MudText Align="Align.Center" Typo="Typo.h4">Qilan</MudText>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudText >
+                        Qilan is a lesser known Java framework for developing n-tier applications using SQL databases such as MySQL and SQL Server.
+                        It is good for moving data between applications and giving a quick demonstartion of what can be done with the data in 
+                        a given database. It is a great solution for small projects but may not be the best for complex domain logic. You don't
+                        get the benefit of abstracting away the database as you would in a Spring application. Not that you cannot make a complex app, 
+                        but it can lead to an extremely coupled system.
+                    </MudText>
+                    <br />
+                    <MudText>
+                        I am currently supporting an Electronic Health Record system and an inventory/CRM written solely with Qilan. If you're 
+                        interested in how your organization could benefit from Qilan, please contact us.
+                    </MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Class="float-right" Href="/contact" Color="Color.Primary">Contact us</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            @*<MudImage Src="/images/qilan.gif"></MudImage>*@
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudImage Src="/images/system-integration.png"></MudImage>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudCard>
+                <MudCardHeader>
+                    <MudText Typo="Typo.h4">Third Party Integrations</MudText>
+                </MudCardHeader>
+                <MudCardContent>
+                   <MudText>
+                        Most businesses today have two or more software products that are integral to business operations. 
+                        A lot of these systems will rely on similar data and because re-entering data takes time and can introduce 
+                        errors both of which can be very costly software companies have been building integrations into their products.
+                        Integrations can be a very low such as Power BI or a webhook that triggers some event in the integrated app.
+                        It can be cumbersome to piece together the right integrations and create a truly unified system with no low 
+                        code integrations. Organizations should leverage the power of their software products available APIs to 
+                        develop custom middleware between systems. This can lead to more coherent data model and allow executives to
+                        see the big picture. 
+                   </MudText>
+                   <br/>
+                   <MudText>
+                       Contact us to see how Avery Business Solutions can help your organization realize the full potential of 
+                       it's software investments. 
+                   </MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Href="/contact" Color="Color.Primary">Contact us</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudCard>
+                <MudCardHeader>
+                    <MudText Typo="Typo.h4">Microsoft 365 and G Suite</MudText>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudText>
+                        According to <a href="https://enlyft.com/tech/products/microsoft-office-365">enlyft</a> 95.92% of the Office Productivity
+                        market is controlled by Microsoft 365 and G Suite. Organizations rely on these products to track data; share
+                        important information; and schedule meetings and events. Sometimes an excel sheet isn't enough and you need a solution
+                        that can input that information in a standard way or you need to allow users to register for an event and automatically 
+                        send a calendar invite.
+                    </MudText>
+                    <br/>
+                    <MudText>
+                        This is where Microsoft Graph and Google's Workspace APIs become extremely useful. Do you have a cumbersome process
+                        that can benifit from automation or structure? Contact us for a free consultation.
+                    </MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Href="/contact" Color="Color.Primary">Contact us</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
