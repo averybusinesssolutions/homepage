@@ -1,11 +1,66 @@
 ﻿@page "/contact"
+@using BlazorApp.Client.Interfaces
+@using BlazorApp.Client.Models
+@using BlazorApp.Client.Services
+@inject ILeadService leadService;
 
 <MudContainer Class="mt-8">
     <MudText Align="Align.Center" Typo="Typo.h2">Contact</MudText>
-    <MudGrid Class="mt-8">
-
-    </MudGrid>
+    @if (!sent)
+    {
+        <EditForm Model="@lead" OnValidSubmit="OnValidSubmit">
+            <MudCard>
+            <MudCardContent>
+                <MudGrid Class="mt-8">
+                    <MudItem xs="12" md="6">
+                        <MudTextField Label="First name" @bind-Value="lead.FirstName" For="(() => lead.FirstName)"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField Label="Last name" @bind-Value="lead.LastName" For="(() => lead.LastName)"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField Label="Email address" @bind-Value="lead.EmailAddress" For="(() => lead.EmailAddress)"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudSelect Label="Company size" @bind-Value="lead.CompanySize" For="(() => lead.CompanySize)">
+                            <MudSelectItem Value="@("1 - 50")"></MudSelectItem>
+                            <MudSelectItem Value="@("51 - 150")"></MudSelectItem>
+                            <MudSelectItem Value="@("151 - 350")"></MudSelectItem>
+                            <MudSelectItem Value="@("351 - 500")"></MudSelectItem>
+                            <MudSelectItem Value="@(">500")"></MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+                    <MudItem xs="12" >
+                        <MudTextField Label="Company name" @bind-Value="lead.CompanyName" For="(() => lead.CompanyName)"></MudTextField>
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudTextField Lines="5" Label="Request" @bind-Value="lead.Request" For="(() => lead.Request)"></MudTextField>
+                    </MudItem>
+                </MudGrid>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton ButtonType="ButtonType.Submit" Class="ml-auto" Variant="Variant.Filled" Color="Color.Primary">Submit</MudButton>
+            </MudCardActions>
+        </MudCard>
+    </EditForm>
+    }
+    else
+    {
+        <MudText Typo="Typo.h4">Thank you</MudText>
+        <br/>
+        <MudText Typo="Typo.body1">Your request has been successfully sent.</MudText>
+    }
 </MudContainer>
 
 @code {
+    public Lead lead  = new Lead();
+    private bool sent = false;
+
+    public async Task OnValidSubmit()
+    {
+        //send request to API
+        var response = await leadService.NewLead(lead);
+        response.EnsureSuccessStatusCode();
+        sent = true;
+    }
 }
