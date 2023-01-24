@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="test.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Azure.Identity" Version="1.8.1" />
     <PackageReference Include="Google.Apis.Gmail.v1" Version="1.59.0.2937" />
     <PackageReference Include="Microsoft.Graph" Version="4.51.0" />
