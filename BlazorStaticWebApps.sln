@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiIsolated", "ApiIsolated\ApiIsolated.csproj", "{162B3342-33B4-49D4-BFD9-F10C053B2025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeadApi", "LeadApi\LeadApi.csproj", "{7EAE5DA8-4AD8-44B8-B05D-967EDB8793B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeadApi", "LeadApi\LeadApi.csproj", "{604A7447-58B8-4AF6-B85A-D71F68D0E658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{162B3342-33B4-49D4-BFD9-F10C053B2025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162B3342-33B4-49D4-BFD9-F10C053B2025}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{162B3342-33B4-49D4-BFD9-F10C053B2025}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EAE5DA8-4AD8-44B8-B05D-967EDB8793B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EAE5DA8-4AD8-44B8-B05D-967EDB8793B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EAE5DA8-4AD8-44B8-B05D-967EDB8793B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EAE5DA8-4AD8-44B8-B05D-967EDB8793B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604A7447-58B8-4AF6-B85A-D71F68D0E658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604A7447-58B8-4AF6-B85A-D71F68D0E658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604A7447-58B8-4AF6-B85A-D71F68D0E658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604A7447-58B8-4AF6-B85A-D71F68D0E658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
