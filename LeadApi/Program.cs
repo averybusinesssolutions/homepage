@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: allowBlazorClient,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:5000").AllowAnyHeader().AllowAnyMethod();
+                          policy.WithOrigins(new[] { "http://localhost:5000", "https://www.averybusiness.net" }).AllowAnyHeader().AllowAnyMethod();
                       });
 });
 
